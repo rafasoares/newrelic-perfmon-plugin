@@ -1,11 +1,11 @@
-class PerfmonMetrics 
+class PerfmonMetrics
   attr_accessor :metric_types, :metric_samples, :typeperf_error_msg, :thread_count
-  
+
   def initialize
     @metric_samples = 1
     @typeperf_error_msg = "Error: No valid counters."
     @thread_count = 5
-     
+
     @metric_types = Hash.new("ms")
     @metric_types["% 401 HTTP Response Sent"] = "%"
     @metric_types["% 403 HTTP Response Sent"] = "%"
@@ -500,5 +500,7 @@ class PerfmonMetrics
     @metric_types["Workflows Unloaded"] = "workflows"
     @metric_types["Workflows Unloaded Per Second"] = "workflows"
     @metric_types["Workflows Unloaded/sec"] = "workflows"
+    @metric_types["Free Megabytes"] = "megabytes"
+    @metric_types["% Free Space"] = "%"
   end
 end
